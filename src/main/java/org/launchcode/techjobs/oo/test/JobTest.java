@@ -27,11 +27,17 @@ public class JobTest {
         Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
         assertTrue(job1 instanceof Job);
+        assertTrue(job1.getName().equals("Product tester"));
+        assertTrue(job1.getEmployer().getValue().equals("ACME"));
+        assertTrue(job1.getLocation().getValue().equals("Desert"));
+        assertTrue(job1.getPositionType().getValue().equals("Quality control"));
+        assertTrue(job1.getCoreCompetency().getValue().equals("Persistence"));
         assertEquals("Product tester", job1.getName());
         assertEquals("ACME", job1.getEmployer().getValue());
         assertEquals("Desert", job1.getLocation().getValue());
         assertEquals("Quality control", job1.getPositionType().getValue());
         assertEquals("Persistence", job1.getCoreCompetency().getValue());
+
     }
 
     @Test
