@@ -99,14 +99,15 @@ public class Job {
 
     @Override
     public String toString() {
+        String noData = "Data not available";
 
         return "\n" +
-                "ID: "+ (this.id != 0 ? id : "Data not available" ) + "\n" +
-                "Name: " + (!this.name.isEmpty() ? name: "Data not available") + "\n" +
-                "Employer: " + (!this.employer.getValue().isEmpty() ? employer: "Data not available") + "\n" +
-                "Location: " + (!this.location.getValue().isEmpty() ? location: "Data not available") + "\n" +
-                "Position Type: " + (!this.positionType.getValue().isEmpty() ? positionType: "Data not available") + "\n" +
-                "Core Competency: " + (!this.coreCompetency.getValue().isEmpty() ? coreCompetency: "Data not available") + "\n";
+                "ID: "+ (id != 0 ? id : noData) + "\n" +
+                "Name: " + (!name.isEmpty() ? name: noData) + "\n" +
+                "Employer: " + (!employer.getValue().isEmpty() ? employer: noData) + "\n" +
+                "Location: " + (!location.getValue().isEmpty() ? location: noData) + "\n" +
+                "Position Type: " + (!positionType.getValue().isEmpty() ? positionType: noData) + "\n" +
+                "Core Competency: " + (!coreCompetency.getValue().isEmpty() ? coreCompetency: noData) + "\n";
 
     }
 }
